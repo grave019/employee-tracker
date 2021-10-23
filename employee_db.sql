@@ -28,3 +28,7 @@ CREATE TABLE employee (
   manager_id INT, 
   PRIMARY KEY (id)
 );
+
+-- Populating the tables
+INSERT INTO department (name)
+VALUES ("Sales"), ("Engineering"), ("Human Resources"), ("Legal"), ("Finance"), ("Artist");
