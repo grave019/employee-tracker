@@ -1,0 +1,29 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "command line employee tracker application",
+  "main": "index.js",
+  "dependencies": {
+    "connection": "^1.4.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grave019/employee-tracker.git"
+  },
+  "keywords": [
+    "employee",
+    "tracker"
+  ],
+  "author": "Brent Graves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grave019/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/grave019/employee-tracker#readme"
+}
