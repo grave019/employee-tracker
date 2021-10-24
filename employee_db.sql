@@ -32,3 +32,9 @@ CREATE TABLE employee (
 -- Populating the tables
 INSERT INTO department (name)
 VALUES ("Sales"), ("Engineering"), ("Human Resources"), ("Legal"), ("Finance"), ("Artist");
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("CEO", "100000", "7"), ("Software Developer", "70000", "2"), ("Lawyer", "60000", "3"), ("Lawyer", "60000", "4"), ("Actuary", "60000", "5"), ("Artist", "70000", "6"), ("Manager", "40000", "1");
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Brent", "Graves", "1", "1"), ("Fenix", "Sampson", "2", "1"), ("Julia", "Roberts", "3", "1"), ("Scarlet", "Johansen", "4", "1"), ("Chris", "Evans", "5", "1"), ("Sandra", "Bullock", "6", "1"), ("Robert", "Downey", "6", "1");
