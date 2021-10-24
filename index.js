@@ -32,9 +32,23 @@ var connection = mysql.createConnection({
   port: 3001,
 
   // Your username
-  user: process.env.DB_USER,
+  user: "root",
 
   // Your password
-  password: process.env.DB_PASSWORD,
+  password: "rootroot",
   database: "employees_db",
 });
+
+figlet("Employee Tracker", (err, result) => {
+    console.log(err || result);
+  });
+
+  // Connect functions
+connection.connect(function (err) {
+    if (err) throw err;
+    start();
+    getDepartments();
+    getRoles();
+    getManagers();
+    getEmployees();
+  });
