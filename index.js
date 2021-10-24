@@ -109,3 +109,25 @@ getRoles = () => {
       }
     );
   };
+
+  // Employee Selection
+getEmployees = () => {
+    connection.query(
+      "SELECT id, CONCAT_WS(' ', first_name, last_name) AS Employee_Name FROM employee",
+      (err, res) => {
+        if (err) throw err;
+        employees = res;
+      }
+    );
+  };
+
+  // Employee Selection
+getEmployees = () => {
+    connection.query(
+      "SELECT id, CONCAT_WS(' ', first_name, last_name) AS Employee_Name FROM employee",
+      (err, res) => {
+        if (err) throw err;
+        employees = res;
+      }
+    );
+  };
