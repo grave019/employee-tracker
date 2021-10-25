@@ -287,3 +287,26 @@ addEmployee = () => {
           role_id = roleOptions[i].id;
         }
       }
+      for (i = 0; i < managerOptions.length; i++) {
+        if (managerOptions[i].managers === answer.manager_id) {
+          manager_id = managerOptions[i].id;
+        }
+      }
+
+      connection.query(
+        `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${answer.first_name}', '${answer.last_name}', ${role_id}, ${manager_id})`,
+        (err, res) => {
+          if (err) throw err;
+
+          console.log(
+            "1 new employee added: " +
+              answer.first_name +
+              " " +
+              answer.last_name
+          );
+          getEmployees();
+          start();
+        }
+      );
+    });
+};
