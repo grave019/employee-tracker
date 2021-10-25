@@ -186,3 +186,48 @@ addDepartment = () => {
         );
       });
   };
+
+  // Role section of adding menu
+addRole = () => {
+    let departmentOptions = [];
+    for (i = 0; i < departments.length; i++) {
+      departmentOptions.push(Object(departments[i]));
+    }
+  
+    inquirer
+      .prompt([
+        {
+          name: "title",
+          type: "input",
+          message: "What is the role would you like to add?",
+        },
+        {
+          name: "salary",
+          type: "input",
+          message: "What is the salary for this position?",
+        },
+        {
+          name: "department_id",
+          type: "list",
+          message: "What department this position for?",
+          choices: departmentOptions,
+        },
+      ])
+      .then(function (answer) {
+        for (i = 0; i < departmentOptions.length; i++) {
+          if (departmentOptions[i].name === answer.department_id) {
+            department_id = departmentOptions[i].id;
+          }
+        }
+        connection.query(
+          `INSERT INTO role (title, salary, department_id) VALUES ('${answer.title}', '${answer.salary}', ${department_id})`,
+          (err, res) => {
+            if (err) throw err;
+  
+            console.log("1 new role added: " + answer.title);
+            getRoles();
+            start();
+          }
+        );
+      });
+  };
