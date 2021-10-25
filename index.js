@@ -164,4 +164,25 @@ addSomething = () => {
         }
       });
   };
-  
+  // Department section of adding menu
+addDepartment = () => {
+    inquirer
+      .prompt([
+        {
+          name: "department",
+          type: "input",
+          message: "Which department would you like to add?",
+        },
+      ])
+      .then(function (answer) {
+        connection.query(
+          `INSERT INTO department (name) VALUES ('${answer.department}')`,
+          (err, res) => {
+            if (err) throw err;
+            console.log("1 new department added: " + answer.department);
+            getDepartments();
+            start();
+          }
+        );
+      });
+  };
