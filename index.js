@@ -231,7 +231,7 @@ addRole = () => {
         );
       });
   };
-  
+
   // Employee section of adding menu
 addEmployee = () => {
     getRoles();
@@ -244,3 +244,27 @@ addEmployee = () => {
     for (i = 0; i < managers.length; i++) {
       managerOptions.push(Object(managers[i]));
     }
+    inquirer
+    .prompt([
+      {
+        name: "first_name",
+        type: "input",
+        message: "What is the employee's first name?",
+      },
+      {
+        name: "last_name",
+        type: "input",
+        message: "What is the employee's last name?",
+      },
+      {
+        name: "role_id",
+        type: "list",
+        message: "What is the role for this employee?",
+        choices: function () {
+          var choiceArray = [];
+          for (var i = 0; i < roleOptions.length; i++) {
+            choiceArray.push(roleOptions[i].title);
+          }
+          return choiceArray;
+        },
+      },
