@@ -268,3 +268,22 @@ addEmployee = () => {
           return choiceArray;
         },
       },
+      {
+        name: "manager_id",
+        type: "list",
+        message: "Who is this employee's manager?",
+        choices: function () {
+          var choiceArray = [];
+          for (var i = 0; i < managerOptions.length; i++) {
+            choiceArray.push(managerOptions[i].managers);
+          }
+          return choiceArray;
+        },
+      },
+    ])
+    .then(function (answer) {
+      for (i = 0; i < roleOptions.length; i++) {
+        if (roleOptions[i].title === answer.role_id) {
+          role_id = roleOptions[i].id;
+        }
+      }
