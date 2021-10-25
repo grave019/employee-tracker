@@ -310,3 +310,15 @@ addEmployee = () => {
       );
     });
 };
+
+// Menu for viewing table content
+viewSomething = () => {
+    inquirer
+      .prompt([
+        {
+          name: "viewChoice",
+          type: "list",
+          message: "What would you like to view?",
+          choices: ["DEPARTMENTS", "ROLES", "EMPLOYEES", "EXIT"],
+        },
+      ])
