@@ -43,6 +43,11 @@
 
   ## Visualization
 
+  ![mockup](Assets/12-sql-homework-demo-01.png)
+  ![mockup2](Assets/12-sql-homework-video-thumbnail.png)
+
+  
+
 https://www.youtube.com/watch?v=RgLTHc0m5-A
 
   ## Acknowledgements
