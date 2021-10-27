@@ -4,9 +4,14 @@
   "description": "command line employee tracker application",
   "main": "index.js",
   "dependencies": {
-    "connection": "^1.4.0",
+    "console-table-printer": "^2.10.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "figlet": "^1.5.2",
     "inquirer": "^8.2.0",
-    "mysql2": "^2.3.2"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.7.0"
   },
   "devDependencies": {},
   "scripts": {
