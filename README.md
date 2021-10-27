@@ -5,6 +5,10 @@
   ## Description
 
   Command line application that allows the user to manage employees. The user can view and change departments, roles employees in the application.
+
+Screen Recording of application below.
+
+  https://www.youtube.com/watch?v=RgLTHc0m5-A
   
 
   ## Table of Contents
@@ -42,11 +46,25 @@
   The most difficult task was getting the inquirer to prompt through all the variables and getting the answers to connect to SQL file on the DBeaver server.
 
   ## Visualization
+mockup 
 
   ![mockup](Assets/12-sql-homework-demo-01.png)
+
+Second Mockup
+
   ![mockup2](Assets/12-sql-homework-video-thumbnail.png)
 
-  
+Screenshots of command line application
+
+![1](Assets/Screen%20Shot%202021-10-26%20at%2010.01.45%20PM.png)
+
+![2](Assets/Screen%20Shot%202021-10-26%20at%2010.01.59%20PM.png)
+
+![3](Assets/Screen%20Shot%202021-10-26%20at%2010.02.11%20PM.png)
+
+DBeaver Connections
+
+![4](Assets/Screen%20Shot%202021-10-26%20at%2010.03.15%20PM.png)
 
 https://www.youtube.com/watch?v=RgLTHc0m5-A
 

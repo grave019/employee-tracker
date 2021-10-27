@@ -129,7 +129,7 @@ addSomething = () => {
       {
         name: "add",
         type: "list",
-        message: "What would you like to add?",
+        message: "Which would you like to add?",
         choices: ["DEPARTMENT", "ROLE", "EMPLOYEE", "EXIT"],
       },
     ])
@@ -162,7 +162,7 @@ addDepartment = () => {
       {
         name: "department",
         type: "input",
-        message: "What department would you like to add?",
+        message: "What is the name of the department you would like to add?",
       },
     ])
     .then(function (answer) {
@@ -190,7 +190,7 @@ addRole = () => {
       {
         name: "title",
         type: "input",
-        message: "What role would you like to add?",
+        message: "What is the role would you like to add?",
       },
       {
         name: "salary",
